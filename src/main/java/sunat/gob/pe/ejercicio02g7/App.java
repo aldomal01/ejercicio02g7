@@ -38,14 +38,27 @@ public class App extends Application {
     	hbox.setPadding(sangriaHbox);
     	
     	Label lblData = new Label("Data");
+    	lblData.setStyle("-fx-font-weight:bold");
+    	
+    	Insets sangriaLabel = new Insets(0, 0, 0, 10);
     	
     	Label lblVentas = new Label("Ventas");
-    	Label lblMarketing = new Label("Marketing");
-    	Label lblDistribucion = new Label("Distribucion");
-    	Label lblCostos = new Label("Costos");
+    	lblVentas.setPadding(sangriaLabel);
     	
+    	Label lblMarketing = new Label("Marketing");
+    	lblMarketing.setPadding(sangriaLabel);
+    	
+    	Label lblDistribucion = new Label("Distribucion");
+    	lblDistribucion.setPadding(sangriaLabel);
+    	
+    	Label lblCostos = new Label("Costos");
+    	lblCostos.setPadding(sangriaLabel);
+    	
+    	
+    	Insets sangriaVBox = new Insets(10, 0, 0, 10);
     	VBox vbox = new VBox(lblData, lblVentas, lblMarketing, lblDistribucion, lblCostos);
-    	    	
+    	vbox.setPadding(sangriaVBox); 	
+    	vbox.setSpacing(5);
         
         Scene scene = new Scene(vbox, 640, 480);
         stage.setScene(scene);
