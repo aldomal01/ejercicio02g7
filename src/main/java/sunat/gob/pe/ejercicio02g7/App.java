@@ -81,11 +81,16 @@ public class App extends Application {
     	hboxSegundaFila.setSpacing(10);
     	
     	VBox tabla = new VBox(hboxPrimeraFila, hboxSegundaFila);
+    	tabla.setSpacing(10);
+    	
+    	Insets sangriaTabla = new Insets(20, 0, 0, 20);
+    	tabla.setPadding(sangriaTabla);
     	   	
     	Scene scene = new Scene(tabla, 640, 480);
         stage.setScene(scene);
         stage.setTitle("Grupo 7");
         stage.show();
+        
     }
 
     public static void main(String[] args) {
