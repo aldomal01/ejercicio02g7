@@ -20,7 +20,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
     	
-        Button btnActual = new Button("Actual");
+       /* Button btnActual = new Button("Actual");
         btnActual.setPrefSize(80, 25);
         
         Button btnProyectado = new Button("Proyectado");
@@ -58,9 +58,31 @@ public class App extends Application {
     	Insets sangriaVBox = new Insets(10, 0, 0, 10);
     	VBox vbox = new VBox(lblData, lblVentas, lblMarketing, lblDistribucion, lblCostos);
     	vbox.setPadding(sangriaVBox); 	
-    	vbox.setSpacing(5);
-        
-        Scene scene = new Scene(vbox, 640, 480);
+    	vbox.setSpacing(5);*/
+    	
+    	Button btnResumen = new Button("Resumen");
+    	btnResumen.setPrefSize(80, 25);
+    	Button btnCredito = new Button("Credito");
+    	btnCredito.setPrefSize(80, 25);
+    	Button btnAhorro = new Button("Ahorro");
+    	btnAhorro.setPrefSize(80, 25);
+    	
+    	Button btnMovimiento = new Button("Movimiento");
+    	btnMovimiento.setPrefSize(80, 25);
+    	Button btnDeudas = new Button("Deudas");
+    	btnDeudas.setPrefSize(80, 25);
+    	Button btnHistorial = new Button("Historial");	
+    	btnHistorial.setPrefSize(80, 25);    	
+    	
+    	HBox hboxPrimeraFila = new HBox(btnResumen, btnCredito, btnAhorro);
+    	hboxPrimeraFila.setSpacing(10);
+    	
+    	HBox hboxSegundaFila = new HBox(btnMovimiento, btnDeudas, btnHistorial);
+    	hboxSegundaFila.setSpacing(10);
+    	
+    	VBox tabla = new VBox(hboxPrimeraFila, hboxSegundaFila);
+    	   	
+    	Scene scene = new Scene(tabla, 640, 480);
         stage.setScene(scene);
         stage.setTitle("Grupo 7");
         stage.show();
